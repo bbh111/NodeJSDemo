@@ -45,7 +45,7 @@ spec:
                 stage('Build a NodeJS project') {
                     checkout scm
                     sh 'node -v'
-                    sh  'npm run start'                    
+                    sh  'npm install express && npm run start'                    
                 }  
             } 
             container('docker')   {
