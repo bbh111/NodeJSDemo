@@ -41,11 +41,10 @@ spec:
 ) {
 
     node(POD_LABEL) {
-            container('maven') {
-                stage('Build a Maven project') {
+            container('node') {
+                stage('Build a NodeJS project') {
                     checkout scm
-                    sh 'node -v'
-                    
+                    sh 'node -v'                    
                 }  
             } 
             container('docker')   {
