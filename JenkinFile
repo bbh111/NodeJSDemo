@@ -44,7 +44,8 @@ spec:
             container('node') {
                 stage('Build a NodeJS project') {
                     checkout scm
-                    sh 'node -v'                    
+                    sh 'node -v'
+                    sh  'npm install express && node index.js'                    
                 }  
             } 
             container('docker')   {
