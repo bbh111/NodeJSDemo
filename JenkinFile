@@ -7,7 +7,7 @@ spec:
     - name: node
       image: 'node:16.14.2'
       volumeMounts:
-        - name: npmCache
+        - name: cache
           mountPath: /root/local/lib/node_modules
       command:
         - sleep
