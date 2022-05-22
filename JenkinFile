@@ -44,6 +44,9 @@ spec:
             container('maven') {
                 stage('Build a Maven project') {
                     checkout scm
+                    sh 'node -v'
+                    sh 'npm install express'
+                    sh 'node index.js'
                 }  
             } 
             container('docker')   {
