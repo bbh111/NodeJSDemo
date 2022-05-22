@@ -45,7 +45,7 @@ spec:
                 stage('Build a Maven project') {
                     checkout scm
                     sh 'node -v'
-                    sh 'npm install express'
+                    
                 }  
             } 
             container('docker')   {
